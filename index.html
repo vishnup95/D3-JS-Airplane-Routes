@@ -37,13 +37,14 @@
   </body>
   <script>
     // All your javascript code will go here
+    // Testing GIT.
     let store = {};
 
     function groupByAirport(data) {
       //We use reduce to transform a list into a object where each key points to an aiport. This way makes it easy to check if is the first time we are seeing the airport.
       let result = data.reduce((result, d) => {
         //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
-
+       
         let currentDest = result[d.DestAirportID] || {
           AirportID: d.DestAirportID,
           Airport: d.DestAirport,
